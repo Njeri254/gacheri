@@ -330,7 +330,7 @@ button {
     background-size: cover;
     background-position: center center;
     min-height: 65vh;
-    background-image: url(/Images/Together.jpg);
+    background-image: url(Images/Together.jpg);
     position: relative;
     padding-right: 15px;
     padding-left: 15px;
