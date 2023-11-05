@@ -524,7 +524,7 @@ section {
 
 .stories-section {
     min-height: 470px;
-      background: url(./Images/happy\ child.jpg) no-repeat center left;
+      background: url(Images/happy\ child.jpg) no-repeat center left;
       background-size: cover;
       padding: 30px 0px;
   }
@@ -869,7 +869,7 @@ section {
     position: relative;
   }
   .donate-col {
-    background-image: url(/Images/Soldier\ &\ Kids.jpg);
+    background-image: url(Images/Soldier\ &\ Kids.jpg);
     background-size: cover;
     background-position: center center;
     min-height: 65vh;
