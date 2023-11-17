@@ -80,6 +80,7 @@ button {
 .menu {
   position: relative;
   background: var(--white);
+  z-index: 1;
 }
 
 .menu-bar li:first-child .dropdown {
