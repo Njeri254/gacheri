@@ -1,4 +1,5 @@
 /* style.css */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
 
 * {
@@ -21,12 +22,25 @@
 }
 
 body {
-  font-family: inherit;
   background-color: var(--white);
   color: var(--dark-grey);
   letter-spacing: -0.4px;
+  font-family: 'Montserrat';
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
 }
 
+/*          Navigation        */
+
+.sticky {
+  z-index: 9999;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+}
 ul {
   list-style: none;
 }
@@ -187,6 +201,10 @@ button {
   border-radius: 50%;
 }
 
+
+/*      Search       */
+
+
 .search input {
   background-color: var(--ash);
   border: none;
@@ -207,12 +225,20 @@ button {
   opacity: 0.6;
 }
 
+
+  /*          Hamburger Menu      */
+
+
 #hamburger {
   display: none;
   padding: 0.1rem;
   margin-left: 1rem;
   font-size: 1.9rem;
 }
+  
+
+/*        Responsive media queries - navigation       */
+
 
 @media (max-width: 1100px) {
   #hamburger {
@@ -293,6 +319,203 @@ button {
   }
 }
 
+
+/*   Carousel    */
+
+
+
+.carousel{
+  position: relative;
+  height: 500px;
+}
+@media (max-width: 992px) {
+  .carousel {
+    height: 650px;
+  }
+}
+.carousel-inner{
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+}
+
+.carousel-inner::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.carousel img {
+  width: 100%;
+  height: 150%;
+}
+
+.carousel-item{
+  position: relative;
+  float: left;
+  display: none;
+  width: 100%;
+  margin-right: -100%;
+}
+
+/* slide effect */
+.carousel-item-active,
+.carousel-item-pos-prev,
+.carousel-item-pos-next{
+  display: block;
+}
+
+.carousel-item-pos-prev{
+  left: -100%;
+}
+
+.carousel-item-pos-next{
+  left: 100%;
+}
+
+.carousel-item-prev{
+  transform: translateX(100%);
+  transition: transform .10s ease-in-out;
+}
+
+.carousel-item-next{
+  transform: translateX(-100%);
+  transition: transform .10s ease-in-out;
+}
+
+/* fade effect */
+.carousel-fade .carousel-item-pos-prev,
+.carousel-fade .carousel-item-pos-next{
+  left: 0;
+  opacity: 0;
+}
+
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item-next{
+  transform: none;
+  opacity: 1;
+  transition: opacity .10s ease-in-out;
+}
+
+.carousel-fade .carousel-item-active.carousel-item-prev,
+.carousel-fade .carousel-item-active.carousel-item-next{
+  opacity: 0;
+}
+
+
+.carousel-caption{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  padding: 20px;
+  transition: 0.25s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .carousel-caption {
+    flex: 0 0 50%;
+    max-width: 50%;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+}
+.carousel-title{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  font-size: 3.5rem;
+  align-items: center;
+}
+
+.carousel-description{
+  margin-top: .75rem;
+  line-height: 150%;
+  align-items: center;
+  color: #fff;
+}
+.carousel-btn {
+  border-radius: 2px;
+  border-color: #fff;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  background-color: #044d1c;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  display: inline-block;
+  font-weight: 400;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+}
+.carousel-indicator{
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  z-index: 1;
+}
+
+.carousel-dot{
+  display: block;
+  padding: .25rem;
+  background-color: rgba(255, 255, 255, .25);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .5s ease-in-out;
+}
+
+.carousel-dot-active{
+  background-color: lightskyblue;
+  cursor: default;
+  pointer-events: none;
+}
+
+.carousel-control{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-button{
+  display: block;
+  padding-inline: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.375rem;
+  background-color: transparent;
+  color: rgba(255, 255, 255, .25);
+  border: none;
+  cursor: pointer;
+  transition: color .25s;
+  z-index: 1;
+}
+
+.carousel-button:hover{
+  color: rgba(135, 206, 250, .75);
+}
+
+
+
 /*  Save the world  */
 
 .savetheworld {
@@ -300,6 +523,10 @@ button {
 	margin: auto;
 	text-align: center;
 	padding-top: 100px;
+}
+.savetheworld h1 {
+  color: rgba(2, 63, 2, 0.788);
+  font-weight: 800;
 }
 h1 {
 	font-size: 36px;
@@ -313,7 +540,9 @@ p {
 	padding: 10px;
 }
 
+
 /*   What We Do    */
+
 
 .what-we-do {
     font-family: 'Roboto', sans-serif;
@@ -372,7 +601,7 @@ p {
       transition: 1s;
   }
   .how-col .how-col2 {
-    position: relative;
+      position: relative;
       width: 100%;
       min-height: 1px;
       padding-right: 15px;
@@ -392,138 +621,82 @@ p {
       max-width: 50%;
   }
   }
-  .what-we-do .how-we-do {
-    height: 100%;
-      min-height: 320px;
-      padding: 30px 24px 10px 24px;
-      display: flex;
-      text-align: center;
-      border: 1px solid #ddd;
-     
-  }
-  
-  @media (max-width: 768px) {
-  .what-we-do .how-we-do {
-      min-height: 270px;
-  }
-  }
-  
-  @media (max-width: 992px) {
-  .what-we-do .how-we-do {
-      padding: 15px;
-      min-height: 320px;
-  }
-  }
-  
-  @media (max-width: 1199px) {
-  .what-we-do .how-we-do {
-      min-height: 360px;
-  }
-  }
   @media(max-width: 700px) {
     .what-we-do-row {
       flex-direction: column;
     }
   }
-  
-  
-  .how-flex {
-    display: flex !important;
-  }
-  .flex-column {
-    flex-direction: column !important;
-  }
-  .what-we-do .box-icon {
-    width: 70px;
-    padding-bottom: 15px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .what-we-do img {
-    vertical-align: middle;
-    border-style: none;
-  }
-  .what-we-do h3 {
+  .what-we-do h2 {
     font-weight: 400;
+    color: #e9da05;
   }
   .what-we-do p {
     font-weight: 400;
   }
   
 
+  /*       What We Do Columns       */
+
+
+.school-tours {
+    min-height: 470px;
+    background: url(Images/High\ School.jpeg) no-repeat center left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 30px 0px;
+}
+.poverty {
+    min-height: 470px;
+    background: url(Images/Soup\ Kitchen.jpeg) no-repeat center left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 30px 0px;
+}
+.livelihoods {
+  min-height: 470px;
+  background: url(Images/homes.jpg) no-repeat center left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 30px 0px;
+}
+.rescue-shelters {
+  min-height: 470px;
+  background: url(Images/homeless.jpg) no-repeat center left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 30px 0px;
+}
+
+ 
   /*     Sponsorship    */
+
 section {
     display: block;
   }
-  #child-sponsorship {
-    min-height: 550px;
-      background: url(Images/IMG_20180623_164825_1.jpg) no-repeat center left;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      margin-bottom: 100px;
-  }
-  .align-content-end {
-    -ms-flex-line-pack: end!important;
-    align-content: flex-end!important;
-  }
-  .sponsor-container {
-    margin-right: auto;
-      margin-left: auto;
-      padding-right: 15px;
-      padding-left: 15px;
-      width: 100%;
-  }
-  .sponsor-row {
-    display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      margin-right: -15px;
-      margin-left: -15px;
-      margin-bottom: 0;
-  }
-  .sponsor-col {
-    position: relative;
-      width: 100%;
-      min-height: 1px;
-      padding-right: 15px;
-      padding-left: 15px;
-  }
-  @media (min-width: 992px) {
-  .sponsor-col {
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      max-width: 50%;
-  }
-  }
-  .sponsor-box {
-    background-color: rgba(51, 51, 51, 0.85);
-      color: #FFF;
-      padding: 25px;
-  }
-  #child-sponsorship h2 {
-    padding-bottom: 10px;
-    font-weight: 500 !important;
-  }
-  .sponsor-box p {
-      font-weight: 400 !important;
-      color: #fff;
-  }
-  #child-sponsorship .sponsor-btn {
-    color: #FFFFFF !important;
-    font-weight: 500 !important;
-    background-color: transparent !important;
-    padding: 0px;
-    font-size: 1.25rem !important;
-    transition: 0.3s;
+  .sponsorship {
+    min-height: 470px;
+    background: url(Images/Collo.jpg) no-repeat center left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 30px 0px;
+    margin-bottom: 70px;
   }
   
+
   /*    Stories    */
 
- .school-section {
+
+  .school-section {
     min-height: 470px;
     background: url(Images/Together.jpg) no-repeat center left;
     -webkit-background-size: cover;
@@ -532,13 +705,24 @@ section {
     background-size: cover;
     padding: 30px 0px;
   }
+ 
   .stories-container {
-    margin-right: auto;
+      margin-right: auto;
       margin-left: auto;
       padding-right: 15px;
       padding-left: 15px;
       width: 100%;
   }
+@media (min-width: 1200px) {
+.stories-container {
+    max-width: 1140px;
+}
+}
+@media (min-width: 992px) {
+.stories-container {
+    max-width: 960px;
+}
+}
   .stories-section, .stories-col {
     height: 470px;
   }
@@ -547,20 +731,14 @@ section {
     flex: 0 0 100%;
     max-width: 100%;
     position: relative;
-      width: 100%;
-      min-height: 1px;
-      padding-right: 15px;
-      padding-left: 15px;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   .d-flex {
-    display: -ms-flexbox!important;
     display: flex!important;
-  }
-  @media (min-width: 768px) {
-  .px-md-0 {
-      padding-right: 0!important;
-      padding-left: 0!important;
-  }
+    display: -ms-flexbox!important;
   }
   .stories-section, .stories-box {
     background: rgba(0, 0, 0, 0.75);
@@ -568,7 +746,6 @@ section {
     padding: 50px;
   }
   .align-self-center {
-    -ms-flex-item-align: center!important;
     align-self: center!important;
   }
   .stories-section,  .stories-box h2 {
@@ -582,7 +759,7 @@ section {
   }
 
   
-/*   Call to Action  */
+/*         Difference        */
 
 .cta {
     width: 80%;
@@ -598,8 +775,10 @@ section {
     position: absolute;
   }
   
+
   /*    footer     */
   
+
   .footer {
     background-color: rgba(2, 63, 2, 0.788);
     padding: 70px 0;
@@ -607,6 +786,8 @@ section {
   .footer-container {
     background-color: rgba(2, 63, 2, 0.788);
     margin: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
   .footer-ul {
     list-style: none;
@@ -688,80 +869,34 @@ section {
   }
   
 
-  /*   About     */
+  /*                            About Page             */
 
 section {
     display: block;
   }
-  .about-container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%;
+  .about-section {
+    min-height: 470px;
+    background: url(Images/Love\ Book.jpg) no-repeat center left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 30px 0px;
+    margin-bottom: 150px;
   }
-  .about-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    margin-bottom: 0;
-  }
-  .about-col {
-    position: relative;
-      width: 100%;
-      min-height: 1px;
-      padding-right: 15px;
-      padding-left: 15px;
-  }
-  .about-page-title {
-    padding-top: 10px;
-    padding-bottom: 30px;
-  }
-  .about-page-title h1 {
-      font-size: 38px;
-      font-weight: 700;
-      padding-top: 60px;
-      padding-bottom: 12px;
-  }
-  .pb {
-    padding-bottom: 1rem!important;
-  }
-  .about-page-title p {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.7;
-  }
-  .container-fluid {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%;
-  }
-  .image-box {
-    padding-bottom: 20px !important;
-    max-width: 1300px;
+  .about-section h2 {
+    color: #cbe91e;
   }
   .mx-auto {
     margin-right: auto !important;
     margin-left: auto !important;
   }
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-    border-style: none;
-  }
-  
-  /*    About US   */
-  
+
   #history {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #F8F8F8;
-    border-top: 1px solid #E5E5E5;
+    background-color: #fff;
+    border-top: 1px solid #fff;
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -819,7 +954,7 @@ section {
   }
   }
   #history img {
-    width: 400px;
+    width: 500px;
   }
   .mx-auto {
     margin-right: auto!important;
@@ -832,8 +967,15 @@ section {
     max-width: 100%;
     height: auto;
   }
+#history h2 {
+  color: #cbe91e;
+}
+
+
 
   /*    Donate Form     */
+
+
 
 
   .donate-section {
@@ -871,6 +1013,7 @@ section {
     margin-right: -15px;
     margin-left: -15px;
     position: relative;
+    z-index: 99;
   }
   .donate-col {
     background-image: url(Images/Soldier\ &\ Kids.jpg);
@@ -1097,201 +1240,11 @@ ol {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-
-/* carousel */
-
-.carousel{
-  position: relative;
-  height: 500px;
+::marker {
+  unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
 }
-@media (max-width: 992px) {
-  .carousel {
-    height: 650px;
-  }
-}
-.carousel-inner{
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  display: flex;
-}
-
-.carousel-inner::after{
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.carousel-item{
-  position: relative;
-  float: left;
-  display: none;
-  width: 100%;
-  margin-right: -100%;
-}
-
-/* slide effect */
-.carousel-item-active,
-.carousel-item-pos-prev,
-.carousel-item-pos-next{
-  display: block;
-}
-
-.carousel-item-pos-prev{
-  left: -100%;
-}
-
-.carousel-item-pos-next{
-  left: 100%;
-}
-
-.carousel-item-prev{
-  transform: translateX(100%);
-  transition: transform .10s ease-in-out;
-}
-
-.carousel-item-next{
-  transform: translateX(-100%);
-  transition: transform .10s ease-in-out;
-}
-
-/* fade effect */
-.carousel-fade .carousel-item-pos-prev,
-.carousel-fade .carousel-item-pos-next{
-  left: 0;
-  opacity: 0;
-}
-
-.carousel-fade .carousel-item-prev,
-.carousel-fade .carousel-item-next{
-  transform: none;
-  opacity: 1;
-  transition: opacity .10s ease-in-out;
-}
-
-.carousel-fade .carousel-item-active.carousel-item-prev,
-.carousel-fade .carousel-item-active.carousel-item-next{
-  opacity: 0;
-}
-
-/* carousel */
-.carousel-img{
-  display: block;
-  width: 350px;
-  height: auto;
-}
-@media (max-width: 576px) {
-  .carousel-img {
-    max-width: 275px;
-  }
-}
-.carousel img {
-  width: 100%;
-  height: 100%;
-}
-.carousel-caption{
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: auto;
-  padding: 40px;
-  text-align: center;
-  color: #fff;
-  z-index: 1;
-  transition: 0.25s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-@media (min-width: 768px) {
-  .carousel-caption {
-    flex: 0 0 50%;
-    max-width: 50%;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-}
-.carousel-title{
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  line-height: 1;
-  font-size: 3.5rem;
-  align-items: center;
-}
-
-.carousel-description{
-  margin-top: .75rem;
-  line-height: 150%;
-  align-items: center;
-  color: #fff;
-}
-.carousel-btn {
-  border-radius: 2px;
-  border-color: #fff;
-  padding: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  background-color: #044d1c;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  display: inline-block;
-  font-weight: 400;
-  vertical-align: middle;
-  user-select: none;
-  border: 1px solid transparent;
-}
-.carousel-indicator{
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: row;
-  gap: .5rem;
-  z-index: 1;
-}
-
-.carousel-dot{
-  display: block;
-  padding: .25rem;
-  background-color: rgba(255, 255, 255, .25);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color .5s ease-in-out;
-}
-
-.carousel-dot-active{
-  background-color: lightskyblue;
-  cursor: default;
-  pointer-events: none;
-}
-
-.carousel-control{
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-button{
-  display: block;
-  padding-inline: 1rem;
-  font-family: "Raleway", sans-serif;
-  font-size: 1.375rem;
-  background-color: transparent;
-  color: rgba(255, 255, 255, .25);
-  border: none;
-  cursor: pointer;
-  transition: color .25s;
-  z-index: 1;
-}
-
-.carousel-button:hover{
-  color: rgba(135, 206, 250, .75);
-}
-
