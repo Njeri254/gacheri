@@ -27,6 +27,16 @@ body {
   letter-spacing: -0.4px;
 }
 
+/*             Navigation       */
+
+
+.sticky {
+  z-index: 9999;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  }
+
 ul {
   list-style: none;
 }
@@ -80,7 +90,6 @@ button {
 .menu {
   position: relative;
   background: var(--white);
-  z-index: 1;
 }
 
 .menu-bar li:first-child .dropdown {
@@ -292,7 +301,13 @@ button {
     display: none;
   }
 }
-.savetheworld {
+
+
+
+/*         Team      */
+
+
+.team {
 	width: 80%;
 	margin: auto;
 	text-align: center;
@@ -301,6 +316,7 @@ button {
 h1 {
 	font-size: 36px;
 	font-weight: 600;
+  color: rgba(2, 63, 2, 0.788);
 }
 p {
 	color: black;
@@ -388,6 +404,7 @@ section {
     font-size: 38px;
     font-weight: 700;
     padding-top: 60px;
+    color: rgba(2, 63, 2, 0.788);
 }
 .pb-2 {
     padding-bottom: 0.5rem;
@@ -518,6 +535,9 @@ img {
     margin-top: 15px;
     padding-left: 0px;
 }
+.executive-text-area h2 {
+  color: rgba(2, 63, 2, 0.788);
+}
 @media (max-width: 767px) {
     .executive-text-area {
         width: 100%;
@@ -558,6 +578,8 @@ img {
   .footer-container {
     background-color: rgba(2, 63, 2, 0.788);
     margin: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
   .footer-ul {
     list-style: none;
