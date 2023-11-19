@@ -8,16 +8,20 @@
 	<meta name="author" content="IamaSERMON">
 	
 	<!-- Page Title -->
-	<title>I am a SERMON | A Charity Organization</title>
+
+	<title>Contacts</title>
 	
 	<!-- Meta Data -->
+
 	<meta name="keywords" content="Charity-Kenya, Organization, SERMON, sermon, I am a SERMON, Volunteer, Donate">
 	<meta name="news_keywords" content="Charity, Organization, SERMON, sermon, I am a SERMON, Volunteer, Donate" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="I am a SERMON - Since 2018" />
 	<meta property="og:image:width" content="612" />
 	<meta property="og:image:height" content="400" />
-	<!-- / Meta Data -->
+
+
+	<!-- Link Data -->
 	
 	
 <link href="contact.css" rel="stylesheet">
@@ -30,25 +34,256 @@
 <link rel="canonical" href="https://iamasermon/index.html">
 </head>
 
-<body class="homepage">
-    <section>
-        <div class="contact-container">
-            <form action="iamasermon.info@gmail.com" onsubmit="sendEmail(); reset(); return false;">
-                <h3>Get In Touch</h3>
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="text" id="phone" placeholder="Phone No." required>
-                <textarea id="message" rows="4" placeholder="How Can we Help?"></textarea>
-                <a href="mailto:iamasermon.info@gmail.com"><button type="submit">Send</button></a>
-            </form>
+<!------------   Content Start  ------------------->
+
+<body>
+
+    <!----------  Navigation  --------->
+
+
+    <header id="nav-menu" aria-label="navigation bar" class="sticky">
+        <div class="container">
+          <div class="nav-start">
+            <a class="logo" href="https://njeri254.github.io/gacheri/">
+              <img src="Images/logo.jpg" width="100" height="90" alt="I am a SERMON Logo" />
+            </a>
+            <nav class="menu">
+              <ul class="menu-bar">
+                    <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                      Who We Are
+                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="dropdown1" class="dropdown">
+                      <ul role="menu">
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="about.html">About Us</a>
+                        </li>
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="team.html">Our Team</a>
+                        </li>
+                        <li role="menuitem">
+                            <a class="dropdown-link" href="contacts.html">Contact Us</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </li>
+                   
+                  <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                    What We Do
+                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="dropdown2" class="dropdown">
+                    <ul role="menu">
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="school.html">School Tours</a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="vulnerable.html">Visits to the Vulnerable</a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="vulnerable.html">Supply of Basic Needs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                    <button class="nav-link dropdown-btn" data-dropdown="dropdown3" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                      Get Involved
+                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="dropdown3" class="dropdown">
+                      <ul role="menu">
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="volunteer.html">Become a Volunteer</a>
+                        </li>
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="volunteer.html">Become a Member</a>
+                        </li>
+                        <li role="menuitem">
+                            <a class="dropdown-link" href="programs.html">Join Our Programs</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </li>
+                <li><a class="nav-link" href="news.html">News</a></li>
+              </ul>
+            </nav>
+          </div>
+      
+          <div class="nav-end">
+            <div class="right-container">
+              <form class="search" role="search">
+                <input type="search" name="search" placeholder="Search" />
+                <i class="bx bx-search" aria-hidden="true"></i>
+              </form>
+              <a href="donate.html"><button class="btn">Donate</button></a>
+            </div>
+
+            <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+              <i class="bx bx-menu" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
-    </section>
-<section>
-<div class="map-container">
-    <h1>Our Location</h1>
-    <iframe src=""></iframe>
+      </header>
+
+
+
+
+      <!---------    Contacts Section  -------->
+
+
+<div class="no-hero-holder">
+  <div class="hero-container">
+    <div class="hero-row">
+      <div class="hero-col">
+        <div class="no-hero-banner">
+          <h2>Get in touch with us</h2>
+          <p>
+            <b>How can we help?</b>
+            <br>
+            Send a message, or get in touch with us at our location.
+            <a href="#location" class="page scroll">Our Location</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</section>
+<div class="contact-page">
+  <div class="hero-container">
+    <div class="hero-row">
+      <div class="contact-col">
+        <div class="hero-row">
+          <div class="form-col">
+            <div class="contact-form-area">
+              <div class="pageStatus-content">
+                <form onsubmit="sendEmail(); reset(); return false;" action="" method="post" id="contactForm" name="contactForm" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <select name="fromForm" id="fromForm" class="form-control" required="required" placeholder="How can we help?*">
+                      <option value>How can we help?</option>
+                      <option value="volunteer">I want to volunteer</option>
+                      <option value="member">I want to be a member</option>
+                      <option value="program">I want to Sign up on the programs</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <select id="toCity" name="toCity" required="required" class="form-control" placeholder="Select a Location*">
+                      <option value>Select a Location</option>
+                      <option value="baringo">Baringo</option>
+                      <option value="bomet">Bomet</option>
+					            <option value="bungoma">Bungoma</option>
+					            <option value="busia">Busia</option>
+					            <option value="elgeyomarakwet">Elgeyo Marakwet</option>
+					            <option value="embu">Embu</option>
+					            <option value="garissa">Garissa</option>
+					            <option value="homabay">Homa Bay</option>
+					            <option value="isiolo">Isiolo</option>
+					            <option value="kajiado">Kajiado</option>
+					            <option value="kakamega">Kakamega</option>
+					            <option value="kericho">Kericho</option>
+					<option value="kiambu">Kiambu</option>
+					<option value="kilifi">Kilifi</option>
+					<option value="kirinyaga">Kirinyaga</option>
+					<option value="kisii">Kisii</option>
+					<option value="kisumu">Kisumu</option>	
+					<option value="kitui">Kitui</option>
+					<option value="kwale">Kwale</option>
+					<option value="laikipia">Laikipia</option>
+					<option value="lamu">Lamu</option>
+					<option value="machakos">Machakos</option>
+					<option value="makueni">Makueni</option>
+					<option value="mandera">Mandera</option>
+					<option value="meru">Meru</option>
+					<option value="migori">Migori</option>
+					<option value="marsabit">Marsabit</option>
+					<option value="mombasa">Mombasa</option>
+					<option value="muranga">Murang'a</option>
+					<option value="nairobi">Nairobi</option>
+					<option value="nakuru">Nakuru</option>
+					<option value="nandi">Nandi</option>
+					<option value="narok">Narok</option>
+					<option value="nyamira">Nyamira</option>
+					<option value="nyandarua">Nyandarua</option>
+					<option value="nyeri">Nyeri</option>
+					<option value="samburu">Samburu</option>
+					<option value="siaya">Siaya</option>
+					<option value="taitataveta">Taita Taveta</option>
+					<option value="tanariver">Tana River</option>
+					<option value="tharakanithi">Tharaka Nithi</option>
+					<option value="transnzoia">Trans Nzoia</option>
+					<option value="turkana">Turkana</option>
+					<option value="uasingishu">Uasin Gishu</option>
+					<option value="vihiga">Vihiga</option>
+					<option value="wajir">Wajir</option>
+					<option value="westpokot">West Pokot</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="fullName" name="fullName" required="required" class="form-control" placeholder="Full Name*">
+                  </div>
+                  <div class="form-group">
+                    <input id="phoneNumber" name="phoneNumber" type="text" class="form-control" placeholder="Phone Number*">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="emailAddress" name="emailAddress" class="form-control" placeholder="Email Address*" required="required">
+                  </div>
+                  <div class="form-group message">
+                    <textarea name="message" id="message" cols="40" rows="5" class="form-control" required="required" placeholder="Your Message*"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button id="saveForm" name="saveForm" type="submit" class="btn-primary">Send Message</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="location-area">
+          <div class="hero-row">
+            <div class="hero-col">
+              <div class="location-head">
+                <h3>Our Location</h3>
+                <div class="hero-row">
+                  <div class="locationInfo">
+                    <div class="location-1">
+                <div class="locationNameHolder">
+                  <h2 class="locationNameVal">Busia</h2>
+                </div>
+                <div class="mt-auto">
+                  <div class="location-pin">
+                    <img src="">
+                    <p>Serving Busia and its environs</p>
+                  </div>
+                  <div class="location-call">
+                    <img src="">
+                    <div class="phoneDiv">
+                      <div class="phone-item" data-index="0">
+                        <a href="tel:+254755904197" class="numberVal">Call</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class>
+                  <div class="blue-btn">
+                    <a href="mailto:iamasermon.info@gmail.com" class="contactLink">Email this location</a>
+                  </div>
+                  <div class="white-btn">
+                    <a href="" class="directionsLink" target="_blank">Get Directions</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
 
  <!-- CONTENT END --------------------------------------------------------------------------------------------------------------- -->
    
@@ -98,6 +333,9 @@
     </div>
 </footer>
 
+<!--        Script    -->
+
+
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
     function sendEmail() {
@@ -108,15 +346,86 @@
         To : 'iamasermon.info@gmail.com',
         From : document.getElementById("email").value,
         Subject : "New contact form enquiry",
-        Body : "Name:" + document.getElementById("name").value
-        + "<br> Email: "+ document.getElementById("email").value
-        + "<br> Phone no: "+ document.getElementById("phone").value
+        Body : "Name:" + document.getElementById("fullName").value
+        + "<br> Email: "+ document.getElementById("emailAddress").value
+        + "<br> Phone no: "+ document.getElementById("phoneNumber").value
         + "<br> Message: "+ document.getElementById("message").value
     }).then(
         message => alert("Message sent successfully!")
     );
     };
 
+    
+    /*       Navigation     */
+
+        const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+        const dropdown = document.querySelectorAll(".dropdown");
+        const hamburgerBtn = document.getElementById("hamburger");
+        const navMenu = document.querySelector(".menu");
+        const links = document.querySelectorAll(".dropdown a");
+        
+        
+        function setAriaExpandedFalse() {
+          dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+        }
+        
+        function closeDropdownMenu() {
+          dropdown.forEach((drop) => {
+            drop.classList.remove("active");
+            drop.addEventListener("click", (e) => e.stopPropagation());
+          });
+        }
+        
+        function toggleHamburger() {
+          navMenu.classList.toggle("show");
+        }
+        
+        dropdownBtn.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            const dropdownIndex = e.currentTarget.dataset.dropdown;
+            const dropdownElement = document.getElementById(dropdownIndex);
+        
+            dropdownElement.classList.toggle("active");
+            dropdown.forEach((drop) => {
+              if (drop.id !== btn.dataset["dropdown"]) {
+                drop.classList.remove("active");
+              }
+            });
+            e.stopPropagation();
+            btn.setAttribute(
+              "aria-expanded",
+              btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
+            );
+          });
+        });
+        
+        // close dropdown menu when the dropdown links are clicked
+        links.forEach((link) =>
+          link.addEventListener("click", () => {
+            closeDropdownMenu();
+            setAriaExpandedFalse();
+            toggleHamburger();
+          })
+        );
+        
+        // close dropdown menu when you click on the document body
+        document.documentElement.addEventListener("click", () => {
+          closeDropdownMenu();
+          setAriaExpandedFalse();
+        });
+        
+        // close dropdown when the escape key is pressed
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            closeDropdownMenu();
+            setAriaExpandedFalse();
+          }
+        });
+        
+        // toggle hamburger menu
+        hamburgerBtn.addEventListener("click", toggleHamburger);
+        
+        
 </script>
 </body>
 </html>
