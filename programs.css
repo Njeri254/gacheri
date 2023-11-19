@@ -27,6 +27,17 @@ body {
   letter-spacing: -0.4px;
 }
 
+/*        Navigation    */
+
+
+
+.sticky {
+z-index: 9999;
+position: fixed;
+background: #fff;
+width: 100%;
+}
+
 ul {
   list-style: none;
 }
@@ -80,7 +91,6 @@ button {
 .menu {
   position: relative;
   background: var(--white);
-  z-index: 1;
 }
 
 .menu-bar li:first-child .dropdown {
@@ -294,7 +304,75 @@ button {
 }
 
 
-/*   Join Our Programs     */
+/*   Programs     */
+
+
+.programs-section {
+  min-height: 470px;
+  background: url(Images/Programs.jpg) no-repeat center left;
+  background-size: cover;
+  padding: 30px 0px;
+  padding-top: 250px;
+}
+
+.stories-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+@media (min-width: 1200px) {
+.stories-container {
+  max-width: 1140px;
+}
+}
+@media (min-width: 992px) {
+.stories-container {
+  max-width: 960px;
+}
+}
+.stories-section, .stories-col {
+  height: 470px;
+}
+.stories-col {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.d-flex {
+  display: flex!important;
+  display: -ms-flexbox!important;
+}
+.stories-section, .stories-box {
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFF;
+  padding: 50px;
+}
+.align-self-center {
+  align-self: center!important;
+}
+.stories-section,  .stories-box h2 {
+  font-weight: 500 !important;
+  margin-bottom: 15px;
+}
+.stories-section, .stories-box p {
+  color: #fff;
+  font-weight: 300 !important;
+  margin-bottom: 15px;
+}
+
+.save {
+  width: 80%;
+	margin: auto;
+	padding-top: 100px;
+  padding-bottom: 50px;
+}
 
 .programs {
     background: #f1f1f1;
@@ -381,7 +459,7 @@ button {
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: aqua;
+    background-color: rgb(6, 71, 17);
     position: relative;
     width: 100%;
 }
@@ -488,9 +566,9 @@ button {
     padding: 1.25rem;
 }
 .text-primary {
-    color: aqua;
+    color: rgb(9, 77, 29);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     line-height: 1.2;
 }
@@ -512,12 +590,110 @@ button {
     background-color: transparent;
     border: 1px solid transparent;
     transition: color 0.15s ease-in-out;
-    color: aqua;
+    color: rgb(5, 112, 32);
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
     width: 100%;
-    display: block;
     border-radius: 0;
     margin-bottom: 0.5rem;
 }
+h3 {
+  color: rgb(5, 112, 32);
+  font-weight: 500;
+  font-size: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+  /*    footer     */
+  
+  .footer {
+    background-color: rgba(2, 63, 2, 0.788);
+    padding: 70px 0;
+  }
+  .footer-container {
+    background-color: rgba(2, 63, 2, 0.788);
+    margin: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .footer-ul {
+    list-style: none;
+  }
+  .footer-li {
+    color: #fff;
+  }
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-col {
+    width: 25%;
+    padding: 0 15px;
+  }
+  .footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #cbe91e;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50%;
+  }
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 10px;
+    transition: 1s;
+  }
+  .footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #fff;
+  }
+  
+  @media(max-width: 767px) {
+    .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  @media(max-width: 574px) {
+    .footer-col {
+      width: 100%;
+    }
+  }
+  
