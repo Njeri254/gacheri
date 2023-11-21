@@ -640,7 +640,7 @@ p {
 
 .school-tours {
     min-height: 470px;
-    background: url(Images/High\ School.jpeg) no-repeat center left;
+    background: url(/Images/High\ School.jpeg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -649,7 +649,7 @@ p {
 }
 .poverty {
     min-height: 470px;
-    background: url(Images/Soup\ Kitchen.jpeg) no-repeat center left;
+    background: url(/Images/Soup\ Kitchen.jpeg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -658,7 +658,7 @@ p {
 }
 .livelihoods {
   min-height: 470px;
-  background: url(Images/homes.jpg) no-repeat center left;
+  background: url(/Images/homes.jpg) no-repeat center left;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -667,7 +667,7 @@ p {
 }
 .rescue-shelters {
   min-height: 470px;
-  background: url(Images/homeless.jpg) no-repeat center left;
+  background: url(/Images/homeless.jpg) no-repeat center left;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -683,7 +683,7 @@ section {
   }
   .sponsorship {
     min-height: 470px;
-    background: url(Images/Collo.jpg) no-repeat center left;
+    background: url(/Images/Collo.jpg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -698,7 +698,7 @@ section {
 
   .school-section {
     min-height: 470px;
-    background: url(Images/Together.jpg) no-repeat center left;
+    background: url(/Images/Together.jpg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -876,7 +876,7 @@ section {
   }
   .about-section {
     min-height: 470px;
-    background: url(Images/Love\ Book.jpg) no-repeat center left;
+    background: url(/Images/Love\ Book.jpg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -979,33 +979,13 @@ section {
 
 
   .donate-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-color: #f8f9fa;
-  }
-  .donate-form {
-    background: #fff;
-    min-height: 60vh;
-    position: relative;
-  }
-  .donate-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  .donate-fade .donate-item {
-    z-index: 1;
-    opacity: 1;
-    transition-property: opacity;
-    transform: none;
-  }
-  .donate-item {
-    position: relative;
-    float: left;
-    width: 100%;
-    backface-visibility: hidden;
-    transition: transform .6s ease-in-out;
-    display: block;
+    min-height: 470px;
+    background: url(/Images/Soldier\ &\ Kids.jpg) no-repeat center left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 30px 0px;
   }
   .donate-row {
     display: flex;
@@ -1016,7 +996,7 @@ section {
     z-index: 99;
   }
   .donate-col {
-    background-image: url(Images/Soldier\ &\ Kids.jpg);
+    background-image: url(/Images/Soldier\ &\ Kids.jpg);
     background-size: cover;
     background-position: center center;
     min-height: 65vh;
@@ -1044,35 +1024,7 @@ section {
       max-width: 720px;
     }
   }
-  @media (min-width: 576px) {
-    .donate-container {
-      max-width: 540px;
-    }
-  }
-  .col-md-6 {
-    position: relative;
-    width: 100%;
-    background-color: #cbe91e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    color: #fff;
-    opacity: 0.9;
-  }
-  @media (max-width: 767px) {
-    .col-md-6 {
-        height: 100vh;
-        opacity: 0.7;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-  }
-  @media (min-width: 768px) {
-    .m-md-4 {
-      margin: 1.5rem;
-    }
-  }
+ 
 .display-4 {
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -1188,16 +1140,18 @@ input {
   text-align: center;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   border-radius: 5px;
   font-size: 1.25rem;
   line-height: 1.5;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 01.15s;
 }
 .mpesa-btn-primary {
+  padding-left: 15px;
   color: #fff;
-  background-color: #cbe91e;
-  border-color: #cbe91e;
+  border-radius: 5px;
+  background-color: orange;
+  border-color: orange;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .col-lg-4 {
