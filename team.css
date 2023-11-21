@@ -358,24 +358,10 @@ section {
 }
 @media (min-width: 1200px) {
 .team-container {
-    max-width: 1140px;
+    max-width: 1200px;
 }
 }
-@media (min-width: 992px) {
-.team-container {
-    max-width: 960px;
-}
-}
-@media (min-width: 768px) {
-.team-container {
-    max-width: 720px;
-}
-}
-@media (min-width: 576px) {
-.team-container {
-    max-width: 540px;
-}
-}
+
 .team-col {
     position: relative;
     width: 100%;
