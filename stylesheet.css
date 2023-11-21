@@ -640,7 +640,7 @@ p {
 
 .school-tours {
     min-height: 470px;
-    background: url(/Images/High\ School.jpeg) no-repeat center left;
+    background: url(Images/High\ School.jpeg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -649,7 +649,7 @@ p {
 }
 .poverty {
     min-height: 470px;
-    background: url(/Images/Soup\ Kitchen.jpeg) no-repeat center left;
+    background: url(Images/Soup\ Kitchen.jpeg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -658,7 +658,7 @@ p {
 }
 .livelihoods {
   min-height: 470px;
-  background: url(/Images/homes.jpg) no-repeat center left;
+  background: url(Images/homes.jpg) no-repeat center left;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -667,7 +667,7 @@ p {
 }
 .rescue-shelters {
   min-height: 470px;
-  background: url(/Images/homeless.jpg) no-repeat center left;
+  background: url(Images/homeless.jpg) no-repeat center left;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -683,7 +683,7 @@ section {
   }
   .sponsorship {
     min-height: 470px;
-    background: url(/Images/Collo.jpg) no-repeat center left;
+    background: url(Images/Collo.jpg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -698,7 +698,7 @@ section {
 
   .school-section {
     min-height: 470px;
-    background: url(/Images/Together.jpg) no-repeat center left;
+    background: url(Images/Together.jpg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
