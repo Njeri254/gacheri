@@ -20,7 +20,7 @@
 	<!-- / Meta Data -->
 	
 	
-<link href="stylesheet.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,500;1,100;1,300;1,900&display=swap" rel="stylesheet">
@@ -33,8 +33,8 @@
     <header id="nav-menu" aria-label="navigation bar" class="sticky">
         <div class="container">
           <div class="nav-start">
-            <a class="logo" href="https://njeri254.github.io/gacheri/">
-              <img src="Images/logo.jpg" width="100" height="90" alt="I am a SERMON Logo" />
+            <a class="logo" href="/index.html">
+              <img src="/Images/logo.jpg" width="100" height="90" alt="I am a SERMON Logo" />
             </a>
             <nav class="menu">
               <ul class="menu-bar">
@@ -45,13 +45,13 @@
                     <div id="dropdown1" class="dropdown">
                       <ul role="menu">
                         <li role="menuitem">
-                          <a class="dropdown-link" href="about.html">About Us</a>
+                          <a class="dropdown-link" href="/about.html">About Us</a>
                         </li>
                         <li role="menuitem">
-                          <a class="dropdown-link" href="team.html">Our Team</a>
+                          <a class="dropdown-link" href="/team.html">Our Team</a>
                         </li>
                         <li role="menuitem">
-                            <a class="dropdown-link" href="contacts.html">Contact Us</a>
+                            <a class="dropdown-link" href="/contacts.html">Contact Us</a>
                           </li>
                       </ul>
                     </div>
@@ -64,13 +64,10 @@
                   <div id="dropdown2" class="dropdown">
                     <ul role="menu">
                       <li role="menuitem">
-                        <a class="dropdown-link" href="school.html">School Tours</a>
+                        <a class="dropdown-link" href="/school.html">School Tours</a>
                       </li>
                       <li role="menuitem">
-                        <a class="dropdown-link" href="vulnerable.html">Visits to the Vulnerable</a>
-                      </li>
-                      <li role="menuitem">
-                        <a class="dropdown-link" href="vulnerable.html">Supply of Basic Needs</a>
+                        <a class="dropdown-link" href="/vulnerable.html">Visits to the Vulnerable</a>
                       </li>
                     </ul>
                   </div>
@@ -83,18 +80,36 @@
                     <div id="dropdown3" class="dropdown">
                       <ul role="menu">
                         <li role="menuitem">
-                          <a class="dropdown-link" href="volunteer.html">Become a Volunteer</a>
+                          <a class="dropdown-link" href="/volunteer.html">Become a Volunteer</a>
                         </li>
                         <li role="menuitem">
-                          <a class="dropdown-link" href="volunteer.html">Become a Member</a>
+                          <a class="dropdown-link" href="/volunteer.html">Become a Member</a>
                         </li>
                         <li role="menuitem">
-                            <a class="dropdown-link" href="programs.html">Join Our Programs</a>
+                            <a class="dropdown-link" href="/programs.html">Join Our Programs</a>
                           </li>
                       </ul>
                     </div>
                   </li>
-                <li><a class="nav-link" href="news.html">News</a></li>
+                  <li>
+                    <button class="nav-link dropdown-btn" data-dropdown="dropdown4" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                     What's New
+                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="dropdown4" class="dropdown">
+                      <ul role="menu">
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="/news.html">News</a>
+                        </li>
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="/events.html">Events</a>
+                        </li>
+                        <li role="menuitem">
+                            <a class="dropdown-link" href="/gallery.html">Gallery</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </li>
               </ul>
             </nav>
           </div>
@@ -105,7 +120,7 @@
                 <input type="search" name="search" placeholder="Search" />
                 <i class="bx bx-search" aria-hidden="true"></i>
               </form>
-              <a href="donate.html><button class="btn btn-primary">Donate</button></a>
+              <button class="btn btn-primary">Donate</button>
             </div>
 
             <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
@@ -117,27 +132,21 @@
 
        <!--     Donate Form-->
 
-       <div>
-        <div id="donateHome" class="donate-home donate-fade">
-            <div class="donate-inner">
-                <div class="donate-item">
-                    <div class="donate-row">
-                        <div class="donate-col"></div>
-                        <div class="donate-container">
-                            <div class="donate-row">
-                                <div class="col-md-6">
-                                    <div class="m-md-4">
-                                        <h2 class="display-4" style="line-height: 1;">Support Our Movement</h2>
-                                        <p class="mb-5">With every Ksh. 50 or Ksh.100 a day, one child gets utilities needed for survival. Your Contribution makes a difference</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+       <section class="donate-section">
+        <div class="stories-container">
+            <div class="stories-col px-md-0 d-flex ">
+                <div class="stories-box align-self-center">
+                    <h2 style="color: orange;">Support Our Cause</h2>
+                    <p>
+                        With every Ksh. 50 to Ksh. 100 a day, one child gets utilities needed for survival.
+                        <br>
+                        Your Contribution makes a difference
+                    </p>
+                    <button class="btn btn-primary"><a href="/donate.html">Donate</a></button>
                 </div>
             </div>
         </div>
-       </div>
+    </section>
        
        <div id="ContentPlaceHolder">
         <section class="donate">
@@ -168,10 +177,10 @@
                   <input name="" type="text" class="form-control" placeholder="Your Safaricom Number">
                 </div>
               </div>
-              <div class="form-row2">
-                <div class="form-group col-md-12">
-                  <input type="submit" value="Donate Now" class="mpesa-btn mpesa-btn-primary">
-                </div>
+            </div>
+            <div class="form-row2">
+              <div class="form-group col-md-12">
+                <input type="submit" value="Donate Now" class="mpesa-btn mpesa-btn-primary">
               </div>
             </div>
             <div class="col-lg-4 offset-md-1">
@@ -207,6 +216,58 @@
           </div>
         </section>
        </div>
+
+
+
+       <!-- CONTENT END --------------------------------------------------------------------------------------------------------------- -->
+   
+<!-- Footer -->
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-row">
+          <div class="footer-col">
+              <h4>Our Charity Organization</h4>
+              <ul class="footer-ul">
+                  <li><a href="/about.html">About Us</a></li>
+                  <li><a href="/whatwedo.html">What we Do</a></li>
+                  <li><a href="/management.html">Management Team</a></li>
+                  <li><a href="/policy.html">Privacy Policy</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Get Help</h4>
+              <ul class="footer-ul">
+                  <li><a href="/faq.html">FAQ</a></li>
+                  <li><a href="/volunteer.html">How to Join</a></li>
+                  <li><a href="/about.html">Our Mission</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Ways to Give</h4>
+              <ul class="footer-ul">
+                  <li><a href="/donate.html">Donate</a></li>
+                  <li><a href="/volunteer.html">Volunteer</a></li>
+                  <li><a href="/programs.html">Join Our Programs</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Follow Us</h4>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-x-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                  <a href="#"><i class="fab fa-tiktok"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#"><i class="fab fa-telegram"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
 
 <!--      Script   -->
 
