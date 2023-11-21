@@ -8,162 +8,351 @@
 	<meta name="author" content="IamaSERMON">
 	
 	<!-- Page Title -->
+
 	<title>I am a SERMON | A Charity Organization</title>
 	
 	<!-- Meta Data -->
-	<meta name="keywords" content="Charity, Organization, SERMON, sermon, I am a SERMON, Volunteer, Donate">
+
+	<meta name="keywords" content="Charity-Kenya, Organization, SERMON, sermon, I am a SERMON, Volunteer, Donate">
 	<meta name="news_keywords" content="Charity, Organization, SERMON, sermon, I am a SERMON, Volunteer, Donate" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="I am a SERMON - Since 2018" />
 	<meta property="og:image:width" content="612" />
 	<meta property="og:image:height" content="400" />
-	<!-- / Meta Data -->
-	
-	
-	<link href="volunteer.css" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+
+	<!-- Link Data -->
+
+<link href="volunteer.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,500;1,100;1,300;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-	
-	<link rel="canonical" href="https://iamasermon/index.html">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="canonical" href="https://iamasermon/index.html">
 </head>
+
+<!----------------   Content Start------------------------------------------>
 <body>
-       <!-- Navigation -->
-	
 
-      <!--  Volunteer Form-->
-<div class="form-row">
-	<div class="card">
-		<div class="inner-box" id="card">
-	<div class="card-front">
-		<form action="" method="post">
-			<h1>
-				Sign Up
-			</h1>
-			<fieldset>
-				<legend><span class="number">1</span>Your Basic Info</legend>
+	<!--      Navigation       -->
 
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="user_name" required>
+    <header id="nav-menu" aria-label="navigation bar" class="sticky">
+        <div class="container">
+          <div class="nav-start">
+            <a class="logo" href="/index.html">
+              <img src="/Images/logo.jpg" width="100" height="90" alt="I am a SERMON Logo" />
+            </a>
+            <nav class="menu">
+              <ul class="menu-bar">
+                    <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                      Who We Are
+                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="dropdown1" class="dropdown">
+                      <ul role="menu">
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="/about.html">About Us</a>
+                        </li>
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="/team.html">Our Team</a>
+                        </li>
+                        <li role="menuitem">
+                            <a class="dropdown-link" href="/contacts.html">Contact Us</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </li>
+                   
+                  <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                    What We Do
+                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="dropdown2" class="dropdown">
+                    <ul role="menu">
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="/school.html">School Tours</a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="/vulnerable.html">Visits to the Vulnerable</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                    <button class="nav-link dropdown-btn" data-dropdown="dropdown3" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                      Get Involved
+                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="dropdown3" class="dropdown">
+                      <ul role="menu">
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="/volunteer.html">Become a Volunteer</a>
+                        </li>
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="/volunteer.html">Become a Member</a>
+                        </li>
+                        <li role="menuitem">
+                            <a class="dropdown-link" href="/programs.html">Join Our Programs</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <button class="nav-link dropdown-btn" data-dropdown="dropdown4" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                     What's New
+                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="dropdown4" class="dropdown">
+                      <ul role="menu">
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="/news.html">News</a>
+                        </li>
+                        <li role="menuitem">
+                          <a class="dropdown-link" href="/events.html">Events</a>
+                        </li>
+                        <li role="menuitem">
+                            <a class="dropdown-link" href="/gallery.html">Gallery</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </li>
+              </ul>
+            </nav>
+          </div>
+      
+          <div class="nav-end">
+            <div class="right-container">
+              <form class="search" role="search">
+                <input type="search" name="search" placeholder="Search" />
+                <i class="bx bx-search" aria-hidden="true"></i>
+              </form>
+              <a href="/donate.html"><button class="btn btn-primary">Donate</button></a>
+            </div>
 
-				<label for="email">Email:</label>
-				<input type="email" id="mail" name="user_email" required>
+            <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+              <i class="bx bx-menu" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </header>
 
-				<label for="password">Password:</label>
-				<input type="password" id="password" name="user_password" class="form-input" pattern=".{6,}">
 
-				<label>Age:</label>
-				<input type="radio" id="under_18" value="under_18" name="user_age">
-				<label for="under_18" class="light">Under 18yrs</label><br>
-				<input type="radio" id="over_18" value="over_18" name="user_age">
-				<label for="over_18" class="light">Over 18yrs</label><br>
+      <!---------------Volunteer----------------->
+      <div class="container-fluid px-0">
+        <div class="vol-row px-0">
+            <div class="vol-col px-0">
+                <div id="template" style="display: inline;">
+                    <section class="vol-section">
+                        <div class="vol-container">
+                            <div class="vol-row">
+                                <div class="col-2">
+                                    <div class="page-title-box">
+                                        <h1 class="pb-2">Volunteer</h1>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="container-fluid orange">
+                    <div class="vol-row">
+                        <div class="vol-container">
+                            <div class="vol-row space">
+                                <div class="vol-col">
+                                    <h2 class="text-light">You can make a difference</h2>
+                                    <p class="text-light">
+                                        There are different many ways you can help out the Community and be a key part of I am a SERMON's Mission and Vision. Together, we can do alot of things. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vol-container">
+                    <div class="vol-row space">
+                        <div class="vol-col">
+                            <h3>Gathering tangible resources and Essentials.</h3>
+                            <p>
+                                Individuals can come together and gather tangible resources such as clothes, shoes, food and toiletries that will be delivered to Children and homes around Busia. Volunteers make our distribution journey successful by loading resources into moveable items. For the ones priviledged with vehicles can also help by offering means from one location to another.
+                            </p>
+                        </div>
+                        
+            <div class="features">
+              <div class="row">
+                  <div class="text-col">
+                    <h2>"By sharing my resources with the least fortunate, I get to appreciate every small thing I am priviledged to have."</h2>
+                    <p>- Collins, Music Director at the Anglican Diocese of Nairobi, Nairobi</p>   
+                  </div>
+                  <div class="img-col">
+                      <img src="/Images/pexels-ylanite-koppens-796602.jpg">
+                  </div>
+              </div>
+              </div>
+                    </div>
+                            <div class="vol-row">
+                                <div class="vol-col">
+                                    <h3>Help at places we visit</h3>
+                                    <p>
+                                        I am a SERMON serves the elderly and the vulnerable. These services include cleaning up of their spaces. This program is a great one for people who are passionate about helping the vulnerable to get the services that may sometimes be a hindrence to their stay.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="vol-row space">
+                                <div class="features">
+                                  <div class="row">
+                                      <div class="text-col">
+                                        <h2>"Volunteering with I am a SERMON makes me feel useful and keeps me involved."</h2>
+                                        <p>- Ethan, Professional Footballer, Nairobi</p>         
+                                      </div>
+                                      <div class="img-col">
+                                          <img src="/Images/pexels-ylanite-koppens-796602.jpg">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="vol-col pb-5">
+                                <h4>
+                                    For more info about volunteering and signing up, please visit our
+                                    <a href="/signup.html">Volunteer Page</a>.
+                                </h4>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			</fieldset>
+            <!-- CONTENT END --------------------------------------------------------------------------------------------------------------- -->
+   
+<!-- Footer -->
 
-			<fieldset>
-				<legend><span class="number">2</span>Sgn Up as?</legend>
-				<label for="bio">Volunteer, Individual Member or Corporate Mmenber</label>
-				<textarea id="bio" name="user_bio" placeholder="volunteer, individual member or corporate member"></textarea>
+<footer>
+  <div class="footer-container">
+      <div class="footer-row">
+          <div class="footer-col">
+              <h4>Our Charity Organization</h4>
+              <ul class="footer-ul">
+                  <li><a href="/about.html">About Us</a></li>
+                  <li><a href="/whatwedo.html">What we Do</a></li>
+                  <li><a href="/management.html">Management Team</a></li>
+                  <li><a href="/policy.html">Privacy Policy</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Get Help</h4>
+              <ul class="footer-ul">
+                  <li><a href="/faq.html">FAQ</a></li>
+                  <li><a href="/volunteer.html">How to Join</a></li>
+                  <li><a href="/about.html">Our Mission</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Ways to Give</h4>
+              <ul class="footer-ul">
+                  <li><a href="/donate.html">Donate</a></li>
+                  <li><a href="/volunteer.html">Volunteer</a></li>
+                  <li><a href="/programs.html">Join Our Programs</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Follow Us</h4>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-x-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                  <a href="#"><i class="fab fa-tiktok"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#"><i class="fab fa-telegram"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
 
-				<label for="county">County</label>
-				<select name="user_county" id="county">
-					<option value="baringo">Baringo</option>
-					<option value="bomet">Bomet</option>
-					<option value="bungoma">Bungoma</option>
-					<option value="busia">Busia</option>
-					<option value="elgeyomarakwet">Elgeyo Marakwet</option>
-					<option value="embu">Embu</option>
-					<option value="garissa">Garissa</option>
-					<option value="homabay">Homa Bay</option>
-					<option value="isiolo">Isiolo</option>
-					<option value="kajiado">Kajiado</option>
-					<option value="kakamega">Kakamega</option>
-					<option value="kericho">Kericho</option>
-					<option value="kiambu">Kiambu</option>
-					<option value="kilifi">Kilifi</option>
-					<option value="kirinyaga">Kirinyaga</option>
-					<option value="kisii">Kisii</option>
-					<option value="kisumu">Kisumu</option>	
-					<option value="kitui">Kitui</option>
-					<option value="kwale">Kwale</option>
-					<option value="laikipia">Laikipia</option>
-					<option value="lamu">Lamu</option>
-					<option value="machakos">Machakos</option>
-					<option value="makueni">Makueni</option>
-					<option value="mandera">Mandera</option>
-					<option value="meru">Meru</option>
-					<option value="migori">Migori</option>
-					<option value="marsabit">Marsabit</option>
-					<option value="mombasa">Mombasa</option>
-					<option value="muranga">Murang'a</option>
-					<option value="nairobi">Nairobi</option>
-					<option value="nakuru">Nakuru</option>
-					<option value="nandi">Nandi</option>
-					<option value="narok">Narok</option>
-					<option value="nyamira">Nyamira</option>
-					<option value="nyandarua">Nyandarua</option>
-					<option value="nyeri">Nyeri</option>
-					<option value="samburu">Samburu</option>
-					<option value="siaya">Siaya</option>
-					<option value="taitataveta">Taita Taveta</option>
-					<option value="tanariver">Tana River</option>
-					<option value="tharakanithi">Tharaka Nithi</option>
-					<option value="transnzoia">Trans Nzoia</option>
-					<option value="turkana">Turkana</option>
-					<option value="uasingishu">Uasin Gishu</option>
-					<option value="vihiga">Vihiga</option>
-					<option value="wajir">Wajir</option>
-					<option value="westpokot">West Pokot</option>
-				</select>
-			</fieldset>
-			<button type="submit" onclick="openPopup">Submit</button>
-			<div class="popup" id="popup">
-				<img src="/Images/icons8-check.gif">
-				<h2>Thank You!</h2>
-				<p>Your details have been successfully submitted. You will receive an email for the next steps. Thanks!</p>
-				<button action="mailto: iamasermon.info@gmail.com" type="button" onclick="closePopup">OK</button>
-			</div>
-			<button type="submit" onclick="openLogin()">Already a Member?</button>
-		</form>
-	</div>
-	<div class="card-back">
-		<form action="" method="post">
-			<h1>
-				Log In
-			</h1>
-			<fieldset>
 
-				<label for="email">Email:</label>
-				<input type="email" id="mail" name="user_email" required>
 
-				<label for="password">Password:</label>
-				<input type="password" id="password" name="user_password" class="form-input" pattern=".{6,}">
 
-				<input type="checkbox"><span>Remember Me</span>
-			</fieldset>
-			<button type="submit" >Log In</button>
-			<a href="">Forgot Password</a>
-			</form>
-	</div>
-</div>
-</div>
-</div>
-<script>
-	var card = document.getElementById("card");
-	function openLogin() {
-		card.style.transform = "rotateY(-180deg)";
-	}
-	let popup = getElementById("popup");
 
-	function openPopup () {
-		popup.classList.add("open-popup");
-	}
-	function closePopup () {
-		popup.classList.remove("open-popup");
-	}
-</script>
-</body>
-</html>
+
+
+
+
+      <!----------- SCRIPT ------------------------>
+
+      <script>
+        const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+        const dropdown = document.querySelectorAll(".dropdown");
+        const hamburgerBtn = document.getElementById("hamburger");
+        const navMenu = document.querySelector(".menu");
+        const links = document.querySelectorAll(".dropdown a");
+        
+        
+        function setAriaExpandedFalse() {
+          dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+        }
+        
+        function closeDropdownMenu() {
+          dropdown.forEach((drop) => {
+            drop.classList.remove("active");
+            drop.addEventListener("click", (e) => e.stopPropagation());
+          });
+        }
+        
+        function toggleHamburger() {
+          navMenu.classList.toggle("show");
+        }
+        
+        dropdownBtn.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            const dropdownIndex = e.currentTarget.dataset.dropdown;
+            const dropdownElement = document.getElementById(dropdownIndex);
+        
+            dropdownElement.classList.toggle("active");
+            dropdown.forEach((drop) => {
+              if (drop.id !== btn.dataset["dropdown"]) {
+                drop.classList.remove("active");
+              }
+            });
+            e.stopPropagation();
+            btn.setAttribute(
+              "aria-expanded",
+              btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
+            );
+          });
+        });
+        
+        // close dropdown menu when the dropdown links are clicked
+        links.forEach((link) =>
+          link.addEventListener("click", () => {
+            closeDropdownMenu();
+            setAriaExpandedFalse();
+            toggleHamburger();
+          })
+        );
+        
+        // close dropdown menu when you click on the document body
+        document.documentElement.addEventListener("click", () => {
+          closeDropdownMenu();
+          setAriaExpandedFalse();
+        });
+        
+        // close dropdown when the escape key is pressed
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            closeDropdownMenu();
+            setAriaExpandedFalse();
+          }
+        });
+        
+        // toggle hamburger menu
+        hamburgerBtn.addEventListener("click", toggleHamburger);
+        
+    </script>
+
+    </body>
+
+    </html>
