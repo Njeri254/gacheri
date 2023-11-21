@@ -332,7 +332,7 @@ p {
 
   .school-section {
     min-height: 470px;
-    background: url(Images/boys.jpeg) no-repeat center left;
+    background: url(/Images/boys.jpeg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -341,7 +341,7 @@ p {
   }
   .school-section2 {
     min-height: 470px;
-    background: url(Images/girls.jpeg) no-repeat center left;
+    background: url(/Images/girls.jpeg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
