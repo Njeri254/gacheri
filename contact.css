@@ -348,13 +348,13 @@ button {
     font-size: 46px;
     line-height: 60px;
     font-weight: bold;
-    color: #124E78;
+    color: #077027be;
     margin-bottom: 16px;
   }
   .no-hero-banner p {
     font-size: inherit;
     line-height: 27px;
-    color: #124E78;
+    color: #077027be;
     font-weight: 500;
 }
 b {
@@ -362,8 +362,8 @@ b {
 }
 .no-hero-banner p a {
   font-weight: bold;
-  color: #124E78;
-  border-bottom: 2px solid #00AFD0;
+  color: #077027be;
+  border-bottom: 2px solid #2dd660be;
 }
 .contact-page {
   margin-top: -150px;
@@ -459,8 +459,8 @@ textarea.form-control {
   border-radius: 0.4rem;
   transition: color 0.15s ease-in-out;
   color: #fff;
-  background-color: #00AFD0;
-  border-color: #00AFD0;
+  background-color: #077027be;
+  border-color: #077027be;
 }
 .contact-page button:not(:disabled) [type="submit"]:not(:disabled) {
   cursor: pointer;
@@ -473,7 +473,7 @@ textarea.form-control {
   font-size: 46px;
     line-height: 60px;
     font-weight: bold;
-    color: #124E78;
+    color: #077027be;
     text-align: center;
     margin-bottom: 48px;
 }
@@ -508,7 +508,7 @@ textarea.form-control {
   font-size: 28px;
   line-height: 36px;
   font-weight: bold;
-  color: #124E78;
+  color: #077027be;
 }
 .mt-auto {
   margin-top: auto;
@@ -529,7 +529,7 @@ textarea.form-control {
   font-size: inherit;
   line-height: 24px;
   font-weight: 500;
-  color: #124E78;
+  color: #077027be;
   margin-bottom: 0;
 }
 .location-call {
@@ -550,10 +550,10 @@ textarea.form-control {
   font-size: inherit;
   line-height: 24px;
   font-weight: 500;
-  color: #124E78;
+  color: #077027be;
 }
 .blue-btn a {
-  background: #00AFD0;
+  background: #077027be;
   border-radius: 8px;
   padding: 16px 25px;
   font-size: inherit;
@@ -562,7 +562,7 @@ textarea.form-control {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 15px;
-  border: 2px solid #00AFD0;
+  border: 2px solid #077027be;
   transition: all 0.4s ease-in-out;
 }
 .white-btn a {
@@ -571,11 +571,11 @@ textarea.form-control {
   padding: 16px 25px;
   font-size: inherit;
   line-height: 16px;
-  color: #00AFD0;
+  color: #077027be;
   font-weight: bold;
   display: inline-block;
   margin-bottom: 0px;
-  border: 2px solid #00AFD0;
+  border: 2px solid #077027be;
   transition: all 0.4s ease-in-out;
 }
 
