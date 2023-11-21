@@ -876,7 +876,7 @@ section {
   }
   .about-section {
     min-height: 470px;
-    background: url(/Images/Love\ Book.jpg) no-repeat center left;
+    background: url(Images/Love\ Book.jpg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -980,7 +980,7 @@ section {
 
   .donate-section {
     min-height: 470px;
-    background: url(/Images/Soldier\ &\ Kids.jpg) no-repeat center left;
+    background: url(Images/Soldier\ &\ Kids.jpg) no-repeat center left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -996,7 +996,7 @@ section {
     z-index: 99;
   }
   .donate-col {
-    background-image: url(/Images/Soldier\ &\ Kids.jpg);
+    background-image: url(Images/Soldier\ &\ Kids.jpg);
     background-size: cover;
     background-position: center center;
     min-height: 65vh;
