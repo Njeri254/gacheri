@@ -143,47 +143,60 @@
       <!--   Hero-Carousel   -->
 
 
-      <section class="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item carousel-item-active">
-                <img src="Images/happy child.jpg">
-                <div class="carousel-caption">
-                    <h1 class="carousel-title">Welcome</h1>
-                        <p class="carousel-description">In a world subtly divided in negativity, where doubts rule and fear conquers the anxious minds, we all need each other to live in a positive energy.</p>
-                        <a href="volunteer.html" class="carousel-btn">Volunteer</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="Images/Donate.jpg">
-                <div class="carousel-caption">
-                  <h1 class="carousel-title">Become a Volunteer</h1>
-                  <p class="carousel-description">With every services or shilling you give, a child is able to survive</p>
-                  <a href="donate.html" class="carousel-btn">Donate</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="Images/Community.jpg">
-                <div class="carousel-caption">
-                  <h1 class="carousel-title">Upcoming Events</h1>
-                  <p class="carousel-description"></p>
-                  <a href="register.html" class="carousel-btn">Register Now</a>
-                </div>
+      <div class="slider">
+        <div class="slide active">
+            <img src="Images/Collo.jpg">
+            <div class="info">
+                <h2>Welcome</h2>
+                <p>In a world subtly divided in negativity, where doubts rule and fear conquers the anxious minds, we all need each other to live in a positive energy.</p>
+                <a href="learnmore.html">Learn More</a>
             </div>
         </div>
-        <div class="carousel-indicator">
-            <button class="carousel-dot carousel-dot-active"></button>
-            <button class="carousel-dot"></button>
-            <button class="carousel-dot"></button>
+        <div class="slide">
+            <img src="Images/Donate.jpg">
+            <div class="info">
+                <h2>Support our cause</h2>
+                <p>With ever service or shilling you give, a child survives.</p>
+                <a href="donate.html">Donate</a>
+            </div>
         </div>
-        <div class="carousel-control">
-            <button class="carousel-button carousel-button-prev">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="carousel-button carousel-button-prev">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+        <div class="slide">
+            <img src="Images/Community.jpg">
+            <div class="info">
+                <h2>Become a volunteer</h2>
+                <p>By joining our programs, you get to be part of our Community.</p>
+                <a href="volunteer.html">Volunteer</a>
+            </div>
         </div>
-    </section>
+        <div class="slide">
+            <img src="Images/Donate.jpg">
+            <div class="info">
+                <h2>Upcoming Events</h2>
+                <p>Visit from our calender for updates</p>
+                <a href="events.html">Events</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="Images/Footer.jpg">
+            <div class="info">
+                <h2>Be part of our Community</h2>
+              <p></p>
+              <a href="register.html">Register</a>
+            </div>
+        </div>
+        <div class="navigation">
+            <i class="fas fa-chevron-left prev-btn"></i>
+            <i class="fas fa-chevron-right next-btn"></i>
+        </div>
+        <div class="navigation-visibility">
+            <div class="slide-icon active"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+        </div>
+    </div>
+      
     
         <!--    Save the World-->
     
@@ -333,19 +346,18 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Ways to Give</h4>
-                <ul class="footer-ul">
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="volunteer.html">Volunteer</a></li>
-                    <li><a href="programs.html">Join Our Programs</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Follow Us</h4>
+                <h4>Newsletter</h4>
+                <p style="color: #fff;">Sign up for our latest news and updates</p>
+                <section class="newsletter">
+                  <input type="email" class="form-control" placeholder="Enter your email">
+                  <span class="input-group-btn">
+                    <button style="color: orange;" class="btn-lg" type="submit"><a href="mailto:iamasermon.info@gmail.com">Subscribe</a></button>
+                  </span>
+                </section>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://instagram.com/iamasermonorg?igshid=NzZlODBkYWE4Ng=="><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-tiktok"></i></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
@@ -430,95 +442,80 @@ hamburgerBtn.addEventListener("click", toggleHamburger);
 
 // carousel script  
 
-  let onSlide = false;
-  
-  window.addEventListener("load", () => {
-  autoSlide();
-  
-  const dots = document.querySelectorAll(".carousel-dot");
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].addEventListener("click", () => slide(i));
-  }
-  
-  const buttonPrev = document.querySelector(".carousel-button-prev");
-  const buttonNext = document.querySelector(".carousel-button-next");
-  buttonPrev.addEventListener("click", () => slide(getItemActiveIndex() - 1));
-  buttonNext.addEventListener("click", () => slide(getItemActiveIndex() + 1));
-  })
-  
-  function autoSlide() {
-  setInterval(() => {
-    slide(getItemActiveIndex() + 1);
-  }, 6000); // slide speed = 6s
-  }
-  
-  function slide(toIndex) {
-  if (onSlide)
-    return;
-  onSlide = true;
-  
-  const itemsArray = Array.from(document.querySelectorAll(".carousel-item"));
-  const itemActive = document.querySelector(".carousel-item-active");
-  const itemActiveIndex = itemsArray.indexOf(itemActive);
-  let newItemActive = null;
-  
-  if (toIndex > itemActiveIndex) {
-    // check if toIndex exceeds the number of carousel items
-    if (toIndex >= itemsArray.length) {
-       toIndex = 0;
+ 
+const slider = document.querySelector(".slider");
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const slides = document.querySelectorAll(".slide");
+const slideIcons = document.querySelectorAll(".slide-icon");
+const numberOfSlides = slides.length;
+var slideNumber = 0;
+
+// image slider next button
+
+nextBtn.addEventListener("click",() => {
+    slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+    slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+    });
+    slideNumber++;
+
+    if(slideNumber > (numberOfSlides - 1)) {
+        slideNumber = 0;
     }
-  
-    newItemActive = itemsArray[toIndex];
-  
-    // start transition
-    newItemActive.classList.add("carousel-item-pos-next");
-    setTimeout(() => {
-       newItemActive.classList.add("carousel-item-next");
-       itemActive.classList.add("carousel-item-next");
-    }, 20);
-  } else {
-    // check if toIndex exceeds the number of carousel items
-    if (toIndex < 0) {
-       toIndex = itemsArray.length - 1;
+
+    slides[slideNumber].classList.add("active");
+    slideIcons[slideNumber].classList.add("active");
+});
+
+// image slider previous button
+
+
+prevBtn.addEventListener("click",() => {
+    slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+    slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+    });
+
+    slideNumber--;
+
+    if(slideNumber < 0) {
+        slideNumber = numberOfSlides - 1;
     }
-  
-    newItemActive = itemsArray[toIndex];
-  
-    // start transition
-    newItemActive.classList.add("carousel-item-pos-prev");
-    setTimeout(() => {
-       newItemActive.classList.add("carousel-item-prev");
-       itemActive.classList.add("carousel-item-prev");
-    }, 20);
-  }
-  
-  // remove all transition class and switch active class
-  newItemActive.addEventListener("transitionend", () => {
-    itemActive.className = "carousel-item";
-    newItemActive.className = "carousel-item carousel-item-active";
-    onSlide = false;
-  }, {
-    once: true
-  });
-  
-  slideIndicator(toIndex);
-  }
-  
-  function getItemActiveIndex() {
-  const itemsArray = Array.from(document.querySelectorAll(".carousel-item"));
-  const itemActive = document.querySelector(".carousel-item-active");
-  const itemActiveIndex = itemsArray.indexOf(itemActive);
-  return itemActiveIndex;
-  }
-  
-  function slideIndicator(toIndex) {
-  const dots = document.querySelectorAll(".carousel-dot");
-  const dotActive = document.querySelector(".carousel-dot-active");
-  const newDotActive = dots[toIndex];
-  
-  dotActive.classList.remove("carousel-dot-active");
-  newDotActive.classList.add("carousel-dot-active");
-  }
+
+    slides[slideNumber].classList.add("active");
+    slideIcons[slideNumber].classList.add("active");
+});
+
+// image slider autoplay
+
+var playSlider;
+
+var repeater =() => {
+    playSlider = setInterval(function() {
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+            slideIcon.classList.remove("active");
+        });
+
+        slideNumber++;
+
+        if(slideNumber > (numberOfSlides - 1)) {
+            slideNumber = 0;
+        }
+
+        slides[slideNumber].classList.add("active");
+
+        slideIcons[slideNumber],classList.add("active");
+    }, 6000);
+}
+repeater();
       </script>
 </body>
 </html>
