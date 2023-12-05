@@ -143,7 +143,7 @@
       <!----------Learn More Section-->
 
       <div class="primary-header"></div>
-      <div class="learn-container">
+      <div class="learn-container reveal">
         <div class="learn-row px-0">
             <div class="learn-col px-0">
                 <section>
@@ -154,7 +154,7 @@
                                     
                                 </div>
                             </div>
-                            <div class="learn-container-2">
+                            <div class="learn-container-2 reveal">
                                 <div class="learn-row">
                                     <div class="learn-col">
                                         <div class="featured-story-box shadow">
@@ -172,10 +172,10 @@
                                 <div class="learn-col stories-headline">
                                     <h1>Read More Stories</h1>
                                 </div>
-                                <div class="learn-col-2">
+                                <div class="learn-col-2 reveal">
                                   <div class="card shadow">
                                       <a href="">
-                                          <img class="w-100 d-block" src="/Images/IMG_20180623_164820_0.jpg">
+                                          <img class="w-100 d-block" src="Images/IMG_20180623_164820_0.jpg">
                                       </a>
                                       <div class="card-body">
                                           <a class="card-title" href="">Maji Mazuri Children's Home, Kasarani - Nairobi</a>
@@ -185,7 +185,7 @@
                                       </div>
                                   </div>
                               </div>
-                                <div class="learn-col-2">
+                                <div class="learn-col-2 reveal">
                                     <div class="card shadow">
                                         <a href="">
                                             <img class="w-100 d-block" src="Images/homeless.jpg">
@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="learn-col-2">
+                                <div class="learn-col-2 reveal">
                                     <div class="card shadow">
                                         <a href="">
                                             <img class="w-100 d-block" src="Images/huru.jpg">
@@ -253,7 +253,14 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Follow Us</h4>
+              <h4>Newsletter</h4>
+              <p style="color: #fff;">Sign up for our latest news and updates</p>
+              <section class="newsletter">
+                <input type="email" class="form-control" placeholder="Enter your email">
+                <span class="input-group-btn">
+                  <button style="color: orange;" class="btn-lg" type="submit">Subscribe</button>
+                </span>
+              </section>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-x-twitter"></i></a>
@@ -339,6 +346,27 @@
     // toggle hamburger menu
     hamburgerBtn.addEventListener("click", toggleHamburger);
 
+    // reveal 
+
+window.addEventListener('scroll', reveal);
+
+function reveal () {
+  var reveals = document.querySelectorAll('.reveal');
+
+  for(var i = 0; i < reveals.length; i++) {
+
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if(revealtop < windowheight - revealpoint){
+      reveals[i].classList.add('active');
+    }
+    else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
           </script>
     </body>
     </html>
