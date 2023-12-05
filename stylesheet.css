@@ -14,7 +14,7 @@
   --medium-grey: #636363;
   --light-grey: #eeeeee;
   --ash: #f4f4f4;
-  --primary-color: #2b72fb;
+  --primary-color: orange;
   --white: white;
   --border: 1px solid var(--light-grey);
   --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
@@ -1166,3 +1166,13 @@ ol {
     text-align: start !important;
     text-align-last: start !important;
 }
+ .reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s eas;
+  }
+  .reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
