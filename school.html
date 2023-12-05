@@ -130,7 +130,7 @@
                 <input type="search" name="search" placeholder="Search" />
                 <i class="bx bx-search" aria-hidden="true"></i>
               </form>
-              <button class="btn btn-primary">Donate</button>
+              <a href="donate.html><button class="btn btn-primary">Donate</button></a>
             </div>
 
             <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
@@ -164,7 +164,7 @@
     </div>
 </section>
 
-<section class="school-section2">
+<section class="school-section2 reveal">
     <div class="stories-container">
         <div class="stories-col px-md-0 d-flex ">
             <div class="stories-box align-self-center">
@@ -172,7 +172,7 @@
                 <p>
                     School-going girls go to school struggling with poverty, inadequate education about their health and in turn, loosing concentration during studies. In an effort to help, we gather finances and ensure atleast one child has uniform, shoes and toiletries (sanitary pads). We also offer health education and guidance counselling to those that struggle in their homes. Indoing this, children are able to study will less distractions. In an effort to ensure that cultures against education for females will be reduced and all girls are able to learn.
                 </p>
-                <button class="btn btn-primary"><a href="/learnmore.html">Donate</a></button>
+                <button class="btn btn-primary"><a href="donate.html">Donate</a></button>
             </div>
         </div>
     </div>
@@ -209,7 +209,14 @@
               </ul>
           </div>
           <div class="footer-col">
-              <h4>Follow Us</h4>
+            <h4>Newsletter</h4>
+            <p style="color: #fff;">Sign up for our latest news and updates</p>
+            <section class="newsletter">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <span class="input-group-btn">
+                <button style="color: orange;" class="btn-lg" type="submit"><a href="mailto:iamasermon.info@gmail.com">Subscribe</a></button>
+              </span>
+            </section>
               <div class="social-links">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-x-twitter"></i></a>
@@ -295,6 +302,27 @@
 	// toggle hamburger menu
 	hamburgerBtn.addEventListener("click", toggleHamburger);
 	
+  // reveal 
+
+window.addEventListener('scroll', reveal);
+
+function reveal () {
+  var reveals = document.querySelectorAll('.reveal');
+
+  for(var i = 0; i < reveals.length; i++) {
+
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if(revealtop < windowheight - revealpoint){
+      reveals[i].classList.add('active');
+    }
+    else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
 		  </script>
 		  
 </body>
