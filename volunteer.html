@@ -172,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="vol-container">
+                <div class="vol-container reveal">
                     <div class="vol-row space">
                         <div class="vol-col">
                             <h3>Gathering tangible resources and Essentials.</h3>
@@ -182,7 +182,7 @@
                         </div>
                         
             <div class="features">
-              <div class="row">
+              <div class="row reveal">
                   <div class="text-col">
                     <h2>"By sharing my resources with the least fortunate, I get to appreciate every small thing I am priviledged to have."</h2>
                     <p>- Collins, Music Director at the Anglican Diocese of Nairobi, Nairobi</p>   
@@ -193,7 +193,7 @@
               </div>
               </div>
                     </div>
-                            <div class="vol-row">
+                            <div class="vol-row reveal">
                                 <div class="vol-col">
                                     <h3>Help at places we visit</h3>
                                     <p>
@@ -201,7 +201,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="vol-row space">
+                            <div class="vol-row space reveal">
                                 <div class="features">
                                   <div class="row">
                                       <div class="text-col">
@@ -258,7 +258,14 @@
               </ul>
           </div>
           <div class="footer-col">
-              <h4>Follow Us</h4>
+            <h4>Newsletter</h4>
+            <p style="color: #fff;">Sign up for our latest news and updates</p>
+            <section class="newsletter">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <span class="input-group-btn">
+                <button style="color: orange;" class="btn-lg" type="submit"><a href="mailto:iamasermon.info@gmail.com">Subscribe</a></button>
+              </span>
+            </section>
               <div class="social-links">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-x-twitter"></i></a>
@@ -351,6 +358,27 @@
         // toggle hamburger menu
         hamburgerBtn.addEventListener("click", toggleHamburger);
         
+        // reveal 
+
+window.addEventListener('scroll', reveal);
+
+function reveal () {
+  var reveals = document.querySelectorAll('.reveal');
+
+  for(var i = 0; i < reveals.length; i++) {
+
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if(revealtop < windowheight - revealpoint){
+      reveals[i].classList.add('active');
+    }
+    else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
     </script>
 
     </body>
