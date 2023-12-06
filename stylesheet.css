@@ -327,7 +327,7 @@ button {
   position: relative;
   background: transparent;
   width: 100%;
-  min-height: 600px;
+  min-height: 100px;
   overflow: hidden;
   border-radius: 10px;
   padding-top: 65px;
