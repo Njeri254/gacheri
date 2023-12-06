@@ -330,6 +330,7 @@ button {
   min-height: 600px;
   overflow: hidden;
   border-radius: 10px;
+  padding-top: 65px;
 }
 .slider .slide {
   position: absolute;
@@ -346,6 +347,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-repeat: no-repeat;
 }
 .slider .slide .info {
   position: absolute;
