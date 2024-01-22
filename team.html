@@ -20,6 +20,18 @@
 	<meta property="og:image:width" content="612" />
 	<meta property="og:image:height" content="400" />
 
+  <!--Box Links-->
+
+<link rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 	<!-- Link Data -->
 
 <link href="team.css" rel="stylesheet">
@@ -92,7 +104,7 @@
                           <a class="dropdown-link" href="volunteer.html">Become a Volunteer</a>
                         </li>
                         <li role="menuitem">
-                          <a class="dropdown-link" href="volunteer.html">Become a Member</a>
+                          <a class="dropdown-link" href="member.html">Become a Member</a>
                         </li>
                         <li role="menuitem">
                             <a class="dropdown-link" href="programs.html">Join Our Programs</a>
@@ -143,7 +155,7 @@
 
       <!-----------Team ---------->
 
-      <section class="team">
+      <section class="team" data-aos="fade-down">
         <h1>Leadership Team</h1>
         <p> The Leadership Team is responsible for ensuring smooth operations at I am a SERMON and strengthen the organization's operations.</p>
     </section>
@@ -156,7 +168,7 @@
                     </div>
                     <div class="team-row">
                         <div id="linkset-tempelate" style="display: contents;">
-                            <div class="col-lg-12 executive-card-box">
+                            <div class="col-lg-12 executive-card-box" data-aos="zoom-in-up">
                                 <div class="executive-card">
                                     <div class="executive-avatar-area">
                                         <img alt="Philip Huru" class="img-fluid" src="Images/philip.jpg">
@@ -165,14 +177,14 @@
                                             <p class="executive-subtitle">Director, Founder and Chief Executive Office</p>
                                         </div>
                                     </div>
-                                    <div class="executive-text bio-text">
+                                    <div class="executive-text bio-text" data-aos="zoom-in-down">
                                         <p></p>
                                         <p>Philip Huru is the Founder and Director of 'I am a SERMON' since 2018 driven by a need to see a lasting change in the Society. He is a Reverend in the Anglican Diocese of Nambale.</p>
                                         <p>As a Champion of identity in Schools and Churches, he identified the needs of some children in Schools and the vulnerable, he envisioned a world where every child attains a right to survive. He opened the Organization and runs it.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12 executive-card-box reveal">
+                            <div class="col-lg-12 executive-card-box" data-aos="zoom-in-up">
                             <div class="executive-card">
                                 <div class="executive-avatar-area">
                                     <img alt="Maureen Njeri" class="img-fluid" src="Images/m.njeri.jpg">
@@ -181,7 +193,7 @@
                                         <p class="executive-subtitle">Software Developer, Operation Manager</p>
                                     </div>
                                 </div>
-                                <div class="executive-text bio-text">
+                                <div class="executive-text bio-text" data-aos="zoom-in-down">
                                     <p></p>
                                     <p>Maureen Njeri is the Operation Manager. She joined the Organization later October 2018 as an IT intern and was interested in being part. She started out as a volunteer and later on, raised on the ranks. </p>
                                 </div>
@@ -200,7 +212,7 @@
 <!-- Footer -->
 
 <footer>
-    <div class="footer-container">
+    <div class="footer-container" data-aos="zoom-in-up">
         <div class="footer-row">
             <div class="footer-col">
                 <h4>Our Charity Organization</h4>
@@ -236,16 +248,16 @@
                   <button style="color: orange;" class="btn-lg" type="submit"><a href="mailto:iamasermon.info@gmail.com">Subscribe</a></button>
                 </span>
               </section>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-telegram"></i></a>
-                </div>
-            </div>
+              <div class="social-links">
+                  <a href="https://www.facebook.com/profile.php?id=100064317836420&mibextid=ZbWL"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-x-twitter"></i></a>
+                  <a href="https://instagram.com/iamasermonorg?igshid=NzZlODBkYWE4Ng=="><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                  <a href="#"><i class="fab fa-tiktok"></i></a>
+                  <a href="https://wa.me/254755904197/?text=Hello! I want to be part of your Community, Kindly assist."><i class="fab fa-whatsapp"></i></a>
+                  <a href="#"><i class="fab fa-telegram"></i></a>
+              </div>
+          </div>
         </div>
     </div>
 </footer>
@@ -253,96 +265,13 @@
 
 <!----------Script-------->
 
-
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    const dropdownBtn = document.querySelectorAll(".dropdown-btn");
-    const dropdown = document.querySelectorAll(".dropdown");
-    const hamburgerBtn = document.getElementById("hamburger");
-    const navMenu = document.querySelector(".menu");
-    const links = document.querySelectorAll(".dropdown a");
-    
-    function setAriaExpandedFalse() {
-      dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
-    }
-    
-    function closeDropdownMenu() {
-      dropdown.forEach((drop) => {
-        drop.classList.remove("active");
-        drop.addEventListener("click", (e) => e.stopPropagation());
-      });
-    }
-    
-    function toggleHamburger() {
-      navMenu.classList.toggle("show");
-    }
-    
-    dropdownBtn.forEach((btn) => {
-      btn.addEventListener("click", function (e) {
-        const dropdownIndex = e.currentTarget.dataset.dropdown;
-        const dropdownElement = document.getElementById(dropdownIndex);
-    
-        dropdownElement.classList.toggle("active");
-        dropdown.forEach((drop) => {
-          if (drop.id !== btn.dataset["dropdown"]) {
-            drop.classList.remove("active");
-          }
-        });
-        e.stopPropagation();
-        btn.setAttribute(
-          "aria-expanded",
-          btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
-        );
-      });
-    });
-    
-    // close dropdown menu when the dropdown links are clicked
-    links.forEach((link) =>
-      link.addEventListener("click", () => {
-        closeDropdownMenu();
-        setAriaExpandedFalse();
-        toggleHamburger();
-      })
-    );
-    
-    // close dropdown menu when you click on the document body
-    document.documentElement.addEventListener("click", () => {
-      closeDropdownMenu();
-      setAriaExpandedFalse();
-    });
-    
-    // close dropdown when the escape key is pressed
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closeDropdownMenu();
-        setAriaExpandedFalse();
-      }
-    });
-    
-    // toggle hamburger menu
-    hamburgerBtn.addEventListener("click", toggleHamburger);
-    
-    // reveal 
-
-window.addEventListener('scroll', reveal);
-
-function reveal () {
-  var reveals = document.querySelectorAll('.reveal');
-
-  for(var i = 0; i < reveals.length; i++) {
-
-    var windowheight = window.innerHeight;
-    var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 150;
-
-    if(revealtop < windowheight - revealpoint){
-      reveals[i].classList.add('active');
-    }
-    else {
-      reveals[i].classList.remove('active');
-    }
-  }
-}
-          </script>
-          
+  AOS.init({
+    offset: 300,
+    duration: 1400,
+  });
+</script>
 </body>
 </html>
