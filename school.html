@@ -20,6 +20,18 @@
 	<meta property="og:image:width" content="612" />
 	<meta property="og:image:height" content="400" />
 
+  <!--Box Links-->
+
+<link rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 	<!-- Link Data -->
 	
 <link href="school.css" rel="stylesheet">
@@ -43,7 +55,7 @@
     <header id="nav-menu" aria-label="navigation bar" class="sticky">
         <div class="container">
           <div class="nav-start">
-            <a class="logo" href="https://njeri254.github.io/gacheri/">
+            <a class="logo" href="index.html">
               <img src="Images/logo.jpg" width="100" height="90" alt="I am a SERMON Logo" />
             </a>
             <nav class="menu">
@@ -93,7 +105,7 @@
                           <a class="dropdown-link" href="volunteer.html">Become a Volunteer</a>
                         </li>
                         <li role="menuitem">
-                          <a class="dropdown-link" href="volunteer.html">Become a Member</a>
+                          <a class="dropdown-link" href="member.html">Become a Member</a>
                         </li>
                         <li role="menuitem">
                             <a class="dropdown-link" href="programs.html">Join Our Programs</a>
@@ -130,7 +142,7 @@
                 <input type="search" name="search" placeholder="Search" />
                 <i class="bx bx-search" aria-hidden="true"></i>
               </form>
-              <a href="donate.html><button class="btn btn-primary">Donate</button></a>
+              <a href="donate.html"><button class="btn btn-primary">Donate</button></a>
             </div>
 
             <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
@@ -143,14 +155,14 @@
 <!------ School Section  -------->
 
 
-	    <section class="school">
+	    <section class="school" data-aos="fade-down">
         <h1>School Tours</h1>
         <span></span>
         <br>
         <p> In our events, we make it a priority to visit atleast two schools in a month, within Busia County.</p>
     </section>
 
-<section class="school-section">
+<section class="school-section" data-aos="zoom-in-up">
     <div class="stories-container">
         <div class="stories-col px-md-0 d-flex ">
             <div class="stories-box align-self-center">
@@ -164,7 +176,7 @@
     </div>
 </section>
 
-<section class="school-section2 reveal">
+<section class="school-section2" data-aos="zoom-in-up">
     <div class="stories-container">
         <div class="stories-col px-md-0 d-flex ">
             <div class="stories-box align-self-center">
@@ -181,7 +193,7 @@
 <!-- Footer -->
 
 <footer>
-  <div class="footer-container">
+  <div class="footer-container" data-aos="zoom-in-up">
       <div class="footer-row">
           <div class="footer-col">
               <h4>Our Charity Organization</h4>
@@ -209,21 +221,21 @@
               </ul>
           </div>
           <div class="footer-col">
-            <h4>Newsletter</h4>
-            <p style="color: #fff;">Sign up for our latest news and updates</p>
-            <section class="newsletter">
-              <input type="email" class="form-control" placeholder="Enter your email">
-              <span class="input-group-btn">
-                <button style="color: orange;" class="btn-lg" type="submit"><a href="mailto:iamasermon.info@gmail.com">Subscribe</a></button>
-              </span>
-            </section>
+              <h4>Newsletter</h4>
+              <p style="color: #fff;">Sign up for our latest news and updates</p>
+              <section class="newsletter">
+                <input type="email" class="form-control" placeholder="Enter your email">
+                <span class="input-group-btn">
+                  <button style="color: orange;" class="btn-lg" type="submit"><a href="mailto:iamasermon.info@gmail.com">Subscribe</a></button>
+                </span>
+              </section>
               <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100064317836420&mibextid=ZbWL"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-x-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="https://instagram.com/iamasermonorg?igshid=NzZlODBkYWE4Ng=="><i class="fab fa-instagram"></i></a>
                   <a href="#"><i class="fab fa-youtube"></i></a>
                   <a href="#"><i class="fab fa-tiktok"></i></a>
-                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://wa.me/254755904197/?text=Hello! I want to be part of your Community, Kindly assist."><i class="fab fa-whatsapp"></i></a>
                   <a href="#"><i class="fab fa-telegram"></i></a>
               </div>
           </div>
@@ -232,98 +244,22 @@
 </footer>
 
 
+
+
 <!-----   Script   -------->
 
 
+
+	
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-	const dropdownBtn = document.querySelectorAll(".dropdown-btn");
-	const dropdown = document.querySelectorAll(".dropdown");
-	const hamburgerBtn = document.getElementById("hamburger");
-	const navMenu = document.querySelector(".menu");
-	const links = document.querySelectorAll(".dropdown a");
-	
-	function setAriaExpandedFalse() {
-	  dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
-	}
-	
-	function closeDropdownMenu() {
-	  dropdown.forEach((drop) => {
-		drop.classList.remove("active");
-		drop.addEventListener("click", (e) => e.stopPropagation());
-	  });
-	}
-	
-	function toggleHamburger() {
-	  navMenu.classList.toggle("show");
-	}
-	
-	dropdownBtn.forEach((btn) => {
-	  btn.addEventListener("click", function (e) {
-		const dropdownIndex = e.currentTarget.dataset.dropdown;
-		const dropdownElement = document.getElementById(dropdownIndex);
-	
-		dropdownElement.classList.toggle("active");
-		dropdown.forEach((drop) => {
-		  if (drop.id !== btn.dataset["dropdown"]) {
-			drop.classList.remove("active");
-		  }
-		});
-		e.stopPropagation();
-		btn.setAttribute(
-		  "aria-expanded",
-		  btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
-		);
-	  });
-	});
-	
-	// close dropdown menu when the dropdown links are clicked
-	links.forEach((link) =>
-	  link.addEventListener("click", () => {
-		closeDropdownMenu();
-		setAriaExpandedFalse();
-		toggleHamburger();
-	  })
-	);
-	
-	// close dropdown menu when you click on the document body
-	document.documentElement.addEventListener("click", () => {
-	  closeDropdownMenu();
-	  setAriaExpandedFalse();
-	});
-	
-	// close dropdown when the escape key is pressed
-	document.addEventListener("keydown", (e) => {
-	  if (e.key === "Escape") {
-		closeDropdownMenu();
-		setAriaExpandedFalse();
-	  }
-	});
-	
-	// toggle hamburger menu
-	hamburgerBtn.addEventListener("click", toggleHamburger);
-	
-  // reveal 
-
-window.addEventListener('scroll', reveal);
-
-function reveal () {
-  var reveals = document.querySelectorAll('.reveal');
-
-  for(var i = 0; i < reveals.length; i++) {
-
-    var windowheight = window.innerHeight;
-    var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 150;
-
-    if(revealtop < windowheight - revealpoint){
-      reveals[i].classList.add('active');
-    }
-    else {
-      reveals[i].classList.remove('active');
-    }
-  }
-}
-		  </script>
+  AOS.init({
+    offset: 300,
+    duration: 1400,
+  });
+</script>
 		  
 </body>
 </html>
