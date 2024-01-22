@@ -20,6 +20,18 @@
 	<meta property="og:image:width" content="612" />
 	<meta property="og:image:height" content="400" />
 
+  <!--Box Links-->
+
+<link rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 	<!--  Link Data -->
 	
 
@@ -90,7 +102,7 @@
                           <a class="dropdown-link" href="volunteer.html">Become a Volunteer</a>
                         </li>
                         <li role="menuitem">
-                          <a class="dropdown-link" href="volunteer.html">Become a Member</a>
+                          <a class="dropdown-link" href="member.html">Become a Member</a>
                         </li>
                         <li role="menuitem">
                             <a class="dropdown-link" href="programs.html">Join Our Programs</a>
@@ -156,96 +168,13 @@
 
 <!----------- SCRIPT ------------------------>
 
-      <script>
-const dropdownBtn = document.querySelectorAll(".dropdown-btn");
-const dropdown = document.querySelectorAll(".dropdown");
-const hamburgerBtn = document.getElementById("hamburger");
-const navMenu = document.querySelector(".menu");
-const links = document.querySelectorAll(".dropdown a");
-
-
-function setAriaExpandedFalse() {
-  dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
-}
-
-function closeDropdownMenu() {
-  dropdown.forEach((drop) => {
-    drop.classList.remove("active");
-    drop.addEventListener("click", (e) => e.stopPropagation());
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 300,
+    duration: 1400,
   });
-}
-
-function toggleHamburger() {
-  navMenu.classList.toggle("show");
-}
-
-dropdownBtn.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    const dropdownIndex = e.currentTarget.dataset.dropdown;
-    const dropdownElement = document.getElementById(dropdownIndex);
-
-    dropdownElement.classList.toggle("active");
-    dropdown.forEach((drop) => {
-      if (drop.id !== btn.dataset["dropdown"]) {
-        drop.classList.remove("active");
-      }
-    });
-    e.stopPropagation();
-    btn.setAttribute(
-      "aria-expanded",
-      btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
-    );
-  });
-});
-
-// close dropdown menu when the dropdown links are clicked
-links.forEach((link) =>
-  link.addEventListener("click", () => {
-    closeDropdownMenu();
-    setAriaExpandedFalse();
-    toggleHamburger();
-  })
-);
-
-// close dropdown menu when you click on the document body
-document.documentElement.addEventListener("click", () => {
-  closeDropdownMenu();
-  setAriaExpandedFalse();
-});
-
-// close dropdown when the escape key is pressed
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeDropdownMenu();
-    setAriaExpandedFalse();
-  }
-});
-
-// toggle hamburger menu
-hamburgerBtn.addEventListener("click", toggleHamburger);
-
-// reveal 
-
-window.addEventListener('scroll', reveal);
-
-function reveal () {
-  var reveals = document.querySelectorAll('.reveal');
-
-  for(var i = 0; i < reveals.length; i++) {
-
-    var windowheight = window.innerHeight;
-    var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 150;
-
-    if(revealtop < windowheight - revealpoint){
-      reveals[i].classList.add('active');
-    }
-    else {
-      reveals[i].classList.remove('active');
-    }
-  }
-}
-
 </script>
       </body>
 </html>
