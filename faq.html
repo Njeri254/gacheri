@@ -20,7 +20,17 @@
 	<meta property="og:image:width" content="612" />
 	<meta property="og:image:height" content="400" />
 
+<!--Box Links-->
 
+<link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+        rel="stylesheet"/>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 	<!-- Link Data -->
 
@@ -92,7 +102,7 @@
                           <a class="dropdown-link" href="volunteer.html">Become a Volunteer</a>
                         </li>
                         <li role="menuitem">
-                          <a class="dropdown-link" href="volunteer.html">Become a Member</a>
+                          <a class="dropdown-link" href="member.html">Become a Member</a>
                         </li>
                         <li role="menuitem">
                             <a class="dropdown-link" href="programs.html">Join Our Programs</a>
@@ -252,7 +262,7 @@
 <!-- Footer -->
 
 <footer>
-  <div class="footer-container">
+  <div class="footer-container" data-aos="zoom-in-up">
       <div class="footer-row">
           <div class="footer-col">
               <h4>Our Charity Organization</h4>
@@ -266,31 +276,38 @@
           <div class="footer-col">
               <h4>Get Help</h4>
               <ul class="footer-ul">
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="volunteer.html">How to Join</a></li>
-                  <li><a href="about.html">Our Mission</a></li>
+                  <li><a href="/faq.html">FAQ</a></li>
+                  <li><a href="/volunteer.html">How to Join</a></li>
+                  <li><a href="/about.html">Our Mission</a></li>
               </ul>
           </div>
           <div class="footer-col">
               <h4>Ways to Give</h4>
               <ul class="footer-ul">
-                  <li><a href="donate.html">Donate</a></li>
-                  <li><a href="volunteer.html">Volunteer</a></li>
-                  <li><a href="programs.html">Join Our Programs</a></li>
+                  <li><a href="/donate.html">Donate</a></li>
+                  <li><a href="/volunteer.html">Volunteer</a></li>
+                  <li><a href="/programs.html">Join Our Programs</a></li>
               </ul>
           </div>
           <div class="footer-col">
-              <h4>Follow Us</h4>
-              <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-x-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-youtube"></i></a>
-                  <a href="#"><i class="fab fa-tiktok"></i></a>
-                  <a href="#"><i class="fab fa-whatsapp"></i></a>
-                  <a href="#"><i class="fab fa-telegram"></i></a>
-              </div>
-          </div>
+            <h4>Newsletter</h4>
+            <p style="color: #fff;">Sign up for our latest news and updates</p>
+            <section class="newsletter">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <span class="input-group-btn">
+                <button style="color: orange;" class="btn-lg" type="submit"><a href="mailto:iamasermon.info@gmail.com">Subscribe</a></button>
+              </span>
+            </section>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://instagram.com/iamasermonorg?igshid=NzZlODBkYWE4Ng=="><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/254755904197/?text=Hello! I want to be part of your Community, Kindly assist."><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
       </div>
   </div>
 </footer>
@@ -299,75 +316,15 @@
 
       <!----------- SCRIPT ------------------------>
 
-      <script>
-        const dropdownBtn = document.querySelectorAll(".dropdown-btn");
-        const dropdown = document.querySelectorAll(".dropdown");
-        const hamburgerBtn = document.getElementById("hamburger");
-        const navMenu = document.querySelector(".menu");
-        const links = document.querySelectorAll(".dropdown a");
+      
         
-        
-        function setAriaExpandedFalse() {
-          dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
-        }
-        
-        function closeDropdownMenu() {
-          dropdown.forEach((drop) => {
-            drop.classList.remove("active");
-            drop.addEventListener("click", (e) => e.stopPropagation());
-          });
-        }
-        
-        function toggleHamburger() {
-          navMenu.classList.toggle("show");
-        }
-        
-        dropdownBtn.forEach((btn) => {
-          btn.addEventListener("click", function (e) {
-            const dropdownIndex = e.currentTarget.dataset.dropdown;
-            const dropdownElement = document.getElementById(dropdownIndex);
-        
-            dropdownElement.classList.toggle("active");
-            dropdown.forEach((drop) => {
-              if (drop.id !== btn.dataset["dropdown"]) {
-                drop.classList.remove("active");
-              }
-            });
-            e.stopPropagation();
-            btn.setAttribute(
-              "aria-expanded",
-              btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
-            );
-          });
-        });
-        
-        // close dropdown menu when the dropdown links are clicked
-        links.forEach((link) =>
-          link.addEventListener("click", () => {
-            closeDropdownMenu();
-            setAriaExpandedFalse();
-            toggleHamburger();
-          })
-        );
-        
-        // close dropdown menu when you click on the document body
-        document.documentElement.addEventListener("click", () => {
-          closeDropdownMenu();
-          setAriaExpandedFalse();
-        });
-        
-        // close dropdown when the escape key is pressed
-        document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") {
-            closeDropdownMenu();
-            setAriaExpandedFalse();
-          }
-        });
-        
-        // toggle hamburger menu
-        hamburgerBtn.addEventListener("click", toggleHamburger);
-        
-    </script>
-    
+  <script src="script.js"></script>      
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 300,
+      duration: 1400,
+    });
+  </script>
     </body>
     </html>
